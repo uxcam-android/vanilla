@@ -61,6 +61,7 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 16 Platform (1)" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="uxcam-1.0.6" level="project" />
   </component>
 </module>
 

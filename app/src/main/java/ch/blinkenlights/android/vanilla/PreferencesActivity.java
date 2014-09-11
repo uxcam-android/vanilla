@@ -23,28 +23,29 @@
 
 package ch.blinkenlights.android.vanilla;
 
-import android.annotation.TargetApi;
 import android.app.Activity;
 import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
+import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceGroup;
-import android.preference.CheckBoxPreference;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewFragment;
+
+import com.uxcam.lib.activity.UXCamPreferenceActivity;
+
 import java.util.List;
 
 /**
  * The preferences activity in which one can change application preferences.
  */
-public class PreferencesActivity extends PreferenceActivity {
+public class PreferencesActivity extends UXCamPreferenceActivity {
 	/**
 	 * Initialize the activity, loading the preference specifications.
 	 */
@@ -72,7 +73,7 @@ public class PreferencesActivity extends PreferenceActivity {
 		}
 	}
 
-	public static class AudioActivity extends PreferenceActivity {
+	public static class AudioActivity extends UXCamPreferenceActivity {
 		@SuppressWarnings("deprecation")
 		@Override
 		public void onCreate(Bundle savedInstanceState)
@@ -91,7 +92,7 @@ public class PreferencesActivity extends PreferenceActivity {
 		}
 	}
 
-	public static class ReplayGainActivity extends PreferenceActivity {
+	public static class ReplayGainActivity extends UXCamPreferenceActivity {
 		@SuppressWarnings("deprecation")
 		
 		CheckBoxPreference cbTrackReplayGain;
@@ -146,7 +147,7 @@ public class PreferencesActivity extends PreferenceActivity {
 		}
 	}
 
-	public static class PlaybackActivity extends PreferenceActivity {
+	public static class PlaybackActivity extends UXCamPreferenceActivity {
 		@SuppressWarnings("deprecation")
 		@Override
 		public void onCreate(Bundle savedInstanceState)
@@ -165,7 +166,7 @@ public class PreferencesActivity extends PreferenceActivity {
 		}
 	}
 
-	public static class LibraryActivity extends PreferenceActivity {
+	public static class LibraryActivity extends UXCamPreferenceActivity {
 		@SuppressWarnings("deprecation")
 		@Override
 		public void onCreate(Bundle savedInstanceState)
@@ -186,7 +187,7 @@ public class PreferencesActivity extends PreferenceActivity {
 		}
 	}
 
-	public static class NotificationsActivity extends PreferenceActivity {
+	public static class NotificationsActivity extends UXCamPreferenceActivity {
 		@SuppressWarnings("deprecation")
 		@Override
 		public void onCreate(Bundle savedInstanceState)
@@ -205,7 +206,7 @@ public class PreferencesActivity extends PreferenceActivity {
 		}
 	}
 
-	public static class ShakeActivity extends PreferenceActivity {
+	public static class ShakeActivity extends UXCamPreferenceActivity {
 		@SuppressWarnings("deprecation")
 		@Override
 		public void onCreate(Bundle savedInstanceState)
@@ -224,7 +225,7 @@ public class PreferencesActivity extends PreferenceActivity {
 		}
 	}
 
-	public static class CoverArtActivity extends PreferenceActivity {
+	public static class CoverArtActivity extends UXCamPreferenceActivity {
 		@SuppressWarnings("deprecation")
 		@Override
 		public void onCreate(Bundle savedInstanceState)
@@ -243,7 +244,7 @@ public class PreferencesActivity extends PreferenceActivity {
 		}
 	}
 
-	public static class MiscActivity extends PreferenceActivity {
+	public static class MiscActivity extends UXCamPreferenceActivity {
 		@SuppressWarnings("deprecation")
 		@Override
 		public void onCreate(Bundle savedInstanceState)
@@ -262,7 +263,7 @@ public class PreferencesActivity extends PreferenceActivity {
 		}
 	}
 
-	public static class AboutActivity extends Activity {
+	public static class AboutActivity extends UXCamPreferenceActivity {
 		@Override
 		public void onCreate(Bundle state)
 		{

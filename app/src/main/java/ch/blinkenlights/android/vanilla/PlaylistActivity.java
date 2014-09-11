@@ -38,10 +38,12 @@ import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.Button;
 
+import com.uxcam.lib.activity.UXCamActivity;
+
 /**
  * The playlist activity where playlist songs can be viewed and reordered.
  */
-public class PlaylistActivity extends Activity
+public class PlaylistActivity extends UXCamActivity
 	implements View.OnClickListener
 	         , AbsListView.OnItemClickListener
 	         , DialogInterface.OnClickListener

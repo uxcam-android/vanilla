@@ -29,7 +29,9 @@ import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ListView;
 import android.util.Log;
 
-public class ShowQueueActivity extends Activity {
+import com.uxcam.lib.activity.UXCamActivity;
+
+public class ShowQueueActivity extends UXCamActivity {
 	private ListView mListView;
 	private ShowQueueAdapter listAdapter;
 	

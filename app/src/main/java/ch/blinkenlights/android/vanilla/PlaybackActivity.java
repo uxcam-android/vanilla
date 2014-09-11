@@ -45,12 +45,14 @@ import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.uxcam.lib.activity.UXCamActivity;
+
 /**
  * Base activity for activities that contain playback controls. Handles
  * communication with the PlaybackService and response to state and song
  * changes.
  */
-public abstract class PlaybackActivity extends Activity
+public abstract class PlaybackActivity extends UXCamActivity
 	implements Handler.Callback,
 	           View.OnClickListener,
 	           CoverView.Callback

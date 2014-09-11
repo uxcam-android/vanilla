@@ -22,7 +22,6 @@
 
 package ch.blinkenlights.android.vanilla;
 
-import android.app.Activity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -30,10 +29,12 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 
+import com.uxcam.lib.activity.UXCamActivity;
+
 /**
  * The preferences activity in which one can change application preferences.
  */
-public class TabOrderActivity extends Activity implements View.OnClickListener, OnItemClickListener {
+public class TabOrderActivity extends UXCamActivity implements View.OnClickListener, OnItemClickListener {
 	private TabOrderAdapter mAdapter;
 	private DragListView mList;
 
