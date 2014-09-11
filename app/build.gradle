@@ -1,0 +1,19 @@
+apply plugin: 'android'
+
+android {
+    compileSdkVersion 16
+    buildToolsVersion "19.1.0"
+
+    defaultConfig {
+        applicationId "ch.blinkenlights.android.vanilla"
+        minSdkVersion 15
+        targetSdkVersion 16
+    }
+
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
