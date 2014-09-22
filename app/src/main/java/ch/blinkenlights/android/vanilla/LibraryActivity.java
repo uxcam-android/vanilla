@@ -27,14 +27,12 @@ import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.ApplicationInfo;
 import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.PaintDrawable;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -53,16 +51,19 @@ import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.HorizontalScrollView;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.uxcam.UXCam;
 import com.viewpagerindicator.TabPageIndicator;
-import java.io.File;
+
 import junit.framework.Assert;
+
+import java.io.File;
 
 /**
  * The library activity where songs to play can be selected from the library.
@@ -167,6 +168,8 @@ public class LibraryActivity
 		}
 
 		setContentView(R.layout.library_content);
+
+        UXCam.startApplication(this);
 
 		mSearchBox = findViewById(R.id.search_box);
 
@@ -389,7 +392,7 @@ public class LibraryActivity
 	 * Adds songs matching the data from the given intent to the song timelime.
 	 *
 	 * @param intent An intent created with
-	 * {@link LibraryAdapter#createData(View)}.
+	 * {@link ch.blinkenlights.android.vanilla.LibraryAdapter#createData(android.view.View)}.
 	 * @param action One of LibraryActivity.ACTION_*
 	 */
 	private void pickSongs(Intent intent, int action)
@@ -427,7 +430,7 @@ public class LibraryActivity
 	 * from the view and switching to the appropriate tab.
 	 *
 	 * @param intent An intent created with
-	 * {@link LibraryAdapter#createData(View)}.
+	 * {@link ch.blinkenlights.android.vanilla.LibraryAdapter#createData(android.view.View)}.
 	 */
 	private void expand(Intent intent)
 	{
@@ -619,7 +622,7 @@ public class LibraryActivity
 	 * Builds a media query based off the data stored in the given intent.
 	 *
 	 * @param intent An intent created with
-	 * {@link LibraryAdapter#createData(View)}.
+	 * {@link ch.blinkenlights.android.vanilla.LibraryAdapter#createData(android.view.View)}.
 	 * @param empty If true, use the empty projection (only query id).
 	 * @param all If true query all songs in the adapter; otherwise query based
 	 * on the row selected.
@@ -705,7 +708,7 @@ public class LibraryActivity
 	 *
 	 * @param playlistId The id of the playlist to add to.
 	 * @param intent An intent created with
-	 * {@link LibraryAdapter#createData(View)}.
+	 * {@link ch.blinkenlights.android.vanilla.LibraryAdapter#createData(android.view.View)}.
 	 */
 	private void addToPlaylist(long playlistId, Intent intent)
 	{
@@ -732,7 +735,7 @@ public class LibraryActivity
 	 * informing the user of this.
 	 *
 	 * @param intent An intent created with
-	 * {@link LibraryAdapter#createData(View)}.
+	 * {@link ch.blinkenlights.android.vanilla.LibraryAdapter#createData(android.view.View)}.
 	 */
 	private void delete(Intent intent)
 	{

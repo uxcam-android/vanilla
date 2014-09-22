@@ -37,7 +37,7 @@ public class QueryTask {
 	public String sortOrder;
 
 	/**
-	 * Used for {@link SongTimeline#addSongs(android.content.Context, QueryTask)}.
+	 * Used for {@link ch.blinkenlights.android.vanilla.SongTimeline#addSongs(android.content.Context, ch.blinkenlights.android.vanilla.QueryTask)}.
 	 * One of SongTimeline.MODE_*.
 	 */
 	public int mode;

@@ -43,7 +43,7 @@ import java.util.regex.Pattern;
 
 /**
  * A list adapter that provides a view of the filesystem. The active directory
- * is set through a {@link Limiter} and rows are displayed using MediaViews.
+ * is set through a {@link ch.blinkenlights.android.vanilla.Limiter} and rows are displayed using MediaViews.
  */
 public class FileSystemAdapter
 	extends BaseAdapter

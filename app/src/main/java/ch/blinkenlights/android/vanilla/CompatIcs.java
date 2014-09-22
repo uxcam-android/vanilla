@@ -73,7 +73,7 @@ public class CompatIcs {
 
 	/**
 	 * Update the remote with new metadata.
-	 * {@link #registerRemote(Context, AudioManager)} must have been called
+	 * {@link #registerRemote(android.content.Context, android.media.AudioManager)} must have been called
 	 * first.
 	 *
 	 * @param context A context to use.

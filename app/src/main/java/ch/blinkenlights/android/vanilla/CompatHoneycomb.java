@@ -77,7 +77,7 @@ public class CompatHoneycomb {
 	}
 
 	/**
-	 * Call {@link MenuItem#setActionView(View)} on the given MenuItem.
+	 * Call {@link android.view.MenuItem#setActionView(android.view.View)} on the given MenuItem.
 	 */
 	public static void setActionView(MenuItem item, View view)
 	{
@@ -85,7 +85,7 @@ public class CompatHoneycomb {
 	}
 
 	/**
-	 * Call {@link MenuItem#setShowAsAction(int)} on the given MenuItem.
+	 * Call {@link android.view.MenuItem#setShowAsAction(int)} on the given MenuItem.
 	 */
 	public static void setShowAsAction(MenuItem item, int mode)
 	{
@@ -116,7 +116,7 @@ public class CompatHoneycomb {
 	}
 
 	/**
-	 * Call {@link KeyEvent#hasNoModifiers()}.
+	 * Call {@link android.view.KeyEvent#hasNoModifiers()}.
 	 */
 	public static boolean hasNoModifiers(KeyEvent event)
 	{
@@ -124,7 +124,7 @@ public class CompatHoneycomb {
 	}
 
 	/**
-	 * Call {@link KeyEvent#hasModifiers(int)}.
+	 * Call {@link android.view.KeyEvent#hasModifiers(int)}.
 	 */
 	public static boolean hasModifiers(KeyEvent event, int modifiers)
 	{

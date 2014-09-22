@@ -40,7 +40,7 @@ import android.widget.ListView;
  *     The adapter must implement DragAdapter
  *
  * Dragging disabled by default. Enable it with
- * {@link DragListView#setEditable(boolean)}.
+ * {@link ch.blinkenlights.android.vanilla.DragListView#setEditable(boolean)}.
  *
  * This should really be built-in to Android. This implementation is SUPER-
  * HACKY. : /
@@ -149,12 +149,12 @@ public class DragListView extends ListView implements Handler.Callback {
 
 	/**
 	 * This should be called instead of
-	 * {@link ListView#setAdapter(android.widget.ListAdapter)}.
+	 * {@link android.widget.ListView#setAdapter(android.widget.ListAdapter)}.
 	 * DragListView requires a DragAdapter to handle move/remove callbacks
 	 * from dragging.
 	 *
 	 * @param adapter The adapter to use. Will be passed to
-	 * {@link ListView#setAdapter(android.widget.ListAdapter)}.
+	 * {@link android.widget.ListView#setAdapter(android.widget.ListAdapter)}.
 	 */
 	public void setAdapter(DragAdapter adapter)
 	{

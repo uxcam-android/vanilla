@@ -45,37 +45,37 @@ public final class SongTimeline {
 	/**
 	 * Stop playback.
 	 *
-	 * @see SongTimeline#setFinishAction(int)
+	 * @see ch.blinkenlights.android.vanilla.SongTimeline#setFinishAction(int)
 	 */
 	public static final int FINISH_STOP = 0;
 	/**
 	 * Repeat from the beginning.
 	 *
-	 * @see SongTimeline#setFinishAction(int)
+	 * @see ch.blinkenlights.android.vanilla.SongTimeline#setFinishAction(int)
 	 */
 	public static final int FINISH_REPEAT = 1;
 	/**
 	 * Repeat the current song. This behavior is implemented entirely in
-	 * {@link PlaybackService#onCompletion(android.media.MediaPlayer)};
+	 * {@link ch.blinkenlights.android.vanilla.PlaybackService#onCompletion(android.media.MediaPlayer)};
 	 * pressing the next or previous buttons will advance the song as normal;
 	 * only allowing the song to play until the end will repeat it.
 	 *
-	 * @see SongTimeline#setFinishAction(int)
+	 * @see ch.blinkenlights.android.vanilla.SongTimeline#setFinishAction(int)
 	 */
 	public static final int FINISH_REPEAT_CURRENT = 2;
 	/**
 	 * Stop playback after current song. This behavior is implemented entirely
-	 * in {@link PlaybackService#onCompletion(android.media.MediaPlayer)};
+	 * in {@link ch.blinkenlights.android.vanilla.PlaybackService#onCompletion(android.media.MediaPlayer)};
 	 * pressing the next or previous buttons will advance the song as normal;
 	 * only allowing the song to play until the end.
 	 *
-	 * @see SongTimeline#setFinishAction(int)
+	 * @see ch.blinkenlights.android.vanilla.SongTimeline#setFinishAction(int)
 	 */
 	public static final int FINISH_STOP_CURRENT = 3;
 	/**
 	 * Add random songs to the playlist.
 	 *
-	 * @see SongTimeline#setFinishAction(int)
+	 * @see ch.blinkenlights.android.vanilla.SongTimeline#setFinishAction(int)
 	 */
 	public static final int FINISH_RANDOM = 4;
 
@@ -88,19 +88,19 @@ public final class SongTimeline {
 	/**
 	 * Clear the timeline and use only the provided songs.
 	 *
-	 * @see SongTimeline#addSongs(Context, QueryTask)
+	 * @see ch.blinkenlights.android.vanilla.SongTimeline#addSongs(android.content.Context, ch.blinkenlights.android.vanilla.QueryTask)
 	 */
 	public static final int MODE_PLAY = 0;
 	/**
 	 * Clear the queue and add the songs after the current song.
 	 *
-	 * @see SongTimeline#addSongs(Context, QueryTask)
+	 * @see ch.blinkenlights.android.vanilla.SongTimeline#addSongs(android.content.Context, ch.blinkenlights.android.vanilla.QueryTask)
 	 */
 	public static final int MODE_PLAY_NEXT = 1;
 	/**
 	 * Add the songs at the end of the timeline, clearing random songs.
 	 *
-	 * @see SongTimeline#addSongs(Context, QueryTask)
+	 * @see ch.blinkenlights.android.vanilla.SongTimeline#addSongs(android.content.Context, ch.blinkenlights.android.vanilla.QueryTask)
 	 */
 	public static final int MODE_ENQUEUE = 2;
 	/**
@@ -110,7 +110,7 @@ public final class SongTimeline {
 	 *
 	 * Pass the position in QueryTask.data.
 	 *
-	 * @see SongTimeline#addSongs(Context, QueryTask)
+	 * @see ch.blinkenlights.android.vanilla.SongTimeline#addSongs(android.content.Context, ch.blinkenlights.android.vanilla.QueryTask)
 	 */
 	public static final int MODE_PLAY_POS_FIRST = 3;
 	/**
@@ -121,7 +121,7 @@ public final class SongTimeline {
 	 *
 	 * Pass the id in QueryTask.data.
 	 *
-	 * @see SongTimeline#addSongs(Context, QueryTask)
+	 * @see ch.blinkenlights.android.vanilla.SongTimeline#addSongs(android.content.Context, ch.blinkenlights.android.vanilla.QueryTask)
 	 */
 	public static final int MODE_PLAY_ID_FIRST = 4;
 	/**
@@ -132,7 +132,7 @@ public final class SongTimeline {
 	 *
 	 * Pass the id in QueryTask.data.
 	 *
-	 * @see SongTimeline#addSongs(Context, QueryTask)
+	 * @see ch.blinkenlights.android.vanilla.SongTimeline#addSongs(android.content.Context, ch.blinkenlights.android.vanilla.QueryTask)
 	 */
 	public static final int MODE_ENQUEUE_ID_FIRST = 5;
 	/**
@@ -142,27 +142,27 @@ public final class SongTimeline {
 	 *
 	 * Pass the position in QueryTask.data.
 	 *
-	 * @see SongTimeline#addSongs(Context, QueryTask)
+	 * @see ch.blinkenlights.android.vanilla.SongTimeline#addSongs(android.content.Context, ch.blinkenlights.android.vanilla.QueryTask)
 	 */
 	public static final int MODE_ENQUEUE_POS_FIRST = 6;
 
 	/**
 	 * Disable shuffle.
 	 *
-	 * @see SongTimeline#setShuffleMode(int)
+	 * @see ch.blinkenlights.android.vanilla.SongTimeline#setShuffleMode(int)
 	 */
 	public static final int SHUFFLE_NONE = 0;
 	/**
 	 * Randomize order of songs.
 	 *
-	 * @see SongTimeline#setShuffleMode(int)
+	 * @see ch.blinkenlights.android.vanilla.SongTimeline#setShuffleMode(int)
 	 */
 	public static final int SHUFFLE_SONGS = 1;
 	/**
 	 * Randomize order of albums, preserving the order of tracks inside the
 	 * albums.
 	 *
-	 * @see SongTimeline#setShuffleMode(int)
+	 * @see ch.blinkenlights.android.vanilla.SongTimeline#setShuffleMode(int)
 	 */
 	public static final int SHUFFLE_ALBUMS = 2;
 
@@ -175,25 +175,25 @@ public final class SongTimeline {
 	/**
 	 * Move current position to the previous album.
 	 *
-	 * @see SongTimeline#shiftCurrentSong(int)
+	 * @see ch.blinkenlights.android.vanilla.SongTimeline#shiftCurrentSong(int)
 	 */
 	public static final int SHIFT_PREVIOUS_ALBUM = -2;
 	/**
 	 * Move current position to the previous song.
 	 *
-	 * @see SongTimeline#shiftCurrentSong(int)
+	 * @see ch.blinkenlights.android.vanilla.SongTimeline#shiftCurrentSong(int)
 	 */
 	public static final int SHIFT_PREVIOUS_SONG = -1;
 	/**
 	 * Move current position to the next song.
 	 *
-	 * @see SongTimeline#shiftCurrentSong(int)
+	 * @see ch.blinkenlights.android.vanilla.SongTimeline#shiftCurrentSong(int)
 	 */
 	public static final int SHIFT_NEXT_SONG = 1;
 	/**
 	 * Move current position to the next album.
 	 *
-	 * @see SongTimeline#shiftCurrentSong(int)
+	 * @see ch.blinkenlights.android.vanilla.SongTimeline#shiftCurrentSong(int)
 	 */
 	public static final int SHIFT_NEXT_ALBUM = 2;
 
@@ -290,7 +290,7 @@ public final class SongTimeline {
 
 	/**
 	 * Initializes the timeline with data read from the stream. Data should have
-	 * been saved by a call to {@link SongTimeline#writeState(DataOutputStream)}.
+	 * been saved by a call to {@link ch.blinkenlights.android.vanilla.SongTimeline#writeState(java.io.DataOutputStream)}.
 	 *
 	 * @param in The stream to read from.
 	 */
@@ -414,7 +414,7 @@ public final class SongTimeline {
 	/**
 	 * Return the finish action.
 	 *
-	 * @see SongTimeline#setFinishAction(int)
+	 * @see ch.blinkenlights.android.vanilla.SongTimeline#setFinishAction(int)
 	 */
 	public int getFinishAction()
 	{
@@ -744,7 +744,7 @@ public final class SongTimeline {
 	/**
 	 * Save the active songs for use with broadcastChangedSongs().
 	 *
-	 * @see SongTimeline#broadcastChangedSongs()
+	 * @see ch.blinkenlights.android.vanilla.SongTimeline#broadcastChangedSongs()
 	 */
 	private void saveActiveSongs()
 	{
@@ -759,7 +759,7 @@ public final class SongTimeline {
 	 * Broadcast the active songs that have changed since the last call to
 	 * saveActiveSongs()
 	 *
-	 * @see SongTimeline#saveActiveSongs()
+	 * @see ch.blinkenlights.android.vanilla.SongTimeline#saveActiveSongs()
 	 */
 	private void broadcastChangedSongs()
 	{

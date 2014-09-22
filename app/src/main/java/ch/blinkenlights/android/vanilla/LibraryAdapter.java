@@ -44,7 +44,7 @@ public interface LibraryAdapter extends ListAdapter {
 	 * children of a given parent media item.
 	 *
 	 * @param limiter The limiter, created by
-	 * {@link LibraryAdapter#buildLimiter(long)}.
+	 * {@link ch.blinkenlights.android.vanilla.LibraryAdapter#buildLimiter(long)}.
 	 */
 	public void setLimiter(Limiter limiter);
 
@@ -58,8 +58,8 @@ public interface LibraryAdapter extends ListAdapter {
 	 * Builds a limiter based off of the media represented by the given row.
 	 *
 	 * @param id The id of the row.
-	 * @see LibraryAdapter#getLimiter()
-	 * @see LibraryAdapter#setLimiter(Limiter)
+	 * @see ch.blinkenlights.android.vanilla.LibraryAdapter#getLimiter()
+	 * @see ch.blinkenlights.android.vanilla.LibraryAdapter#setLimiter(ch.blinkenlights.android.vanilla.Limiter)
 	 */
 	public Limiter buildLimiter(long id);
 
@@ -76,7 +76,7 @@ public interface LibraryAdapter extends ListAdapter {
 
 	/**
 	 * Retrieve the data for this adapter. The data must be set with
-	 * {@link LibraryAdapter#commitQuery(Object)} before it takes effect.
+	 * {@link ch.blinkenlights.android.vanilla.LibraryAdapter#commitQuery(Object)} before it takes effect.
 	 *
 	 * This should be called on a worker thread.
 	 *
@@ -89,7 +89,7 @@ public interface LibraryAdapter extends ListAdapter {
 	 *
 	 * Must be called on the UI thread.
 	 *
-	 * @param data Data from {@link LibraryAdapter#query()}.
+	 * @param data Data from {@link ch.blinkenlights.android.vanilla.LibraryAdapter#query()}.
 	 */
 	public void commitQuery(Object data);
 
@@ -127,7 +127,7 @@ public interface LibraryAdapter extends ListAdapter {
 	public static final String DATA_TYPE = "type";
 	/**
 	 * Extra for row data: canonical file path. type: String. Only present if
-	 * type is {@link MediaUtils#TYPE_FILE}.
+	 * type is {@link ch.blinkenlights.android.vanilla.MediaUtils#TYPE_FILE}.
 	 */
 	public static final String DATA_FILE = "file";
 	/**

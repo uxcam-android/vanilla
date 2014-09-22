@@ -595,7 +595,7 @@ public class LibraryPagerAdapter
 	 */
 	private static final int MSG_SAVE_SORT = 1;
 	/**
-	 * Call {@link LibraryPagerAdapter#requestRequery(LibraryAdapter)} on the adapter
+	 * Call {@link ch.blinkenlights.android.vanilla.LibraryPagerAdapter#requestRequery(ch.blinkenlights.android.vanilla.LibraryAdapter)} on the adapter
 	 * passed in obj.
 	 *
 	 * Runs on worker thread.
@@ -678,7 +678,7 @@ public class LibraryPagerAdapter
 	}
 
 	/**
-	 * Call {@link LibraryPagerAdapter#requestRequery(LibraryAdapter)} on the UI
+	 * Call {@link ch.blinkenlights.android.vanilla.LibraryPagerAdapter#requestRequery(ch.blinkenlights.android.vanilla.LibraryAdapter)} on the UI
 	 * thread.
 	 *
 	 * @param adapter The adapter, passed to requestRequery.
@@ -746,7 +746,7 @@ public class LibraryPagerAdapter
 	 * MediaAdapter. Saves this sort mode to preferences and updates the list
 	 * associated with the adapter to display the new sort mode.
 	 *
-	 * @param mode The sort mode. See {@link MediaAdapter#setSortMode(int)} for
+	 * @param mode The sort mode. See {@link ch.blinkenlights.android.vanilla.MediaAdapter#setSortMode(int)} for
 	 * details.
 	 */
 	public void setSortMode(int mode)

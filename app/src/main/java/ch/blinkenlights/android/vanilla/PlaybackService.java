@@ -116,7 +116,7 @@ public final class PlaybackService extends Service
 	/**
 	 * Action for startService: toggle playback on/off.
 	 *
-	 * Unlike {@link PlaybackService#ACTION_TOGGLE_PLAYBACK}, the toggle does
+	 * Unlike {@link ch.blinkenlights.android.vanilla.PlaybackService#ACTION_TOGGLE_PLAYBACK}, the toggle does
 	 * not occur immediately. Instead, it is delayed so that if two of these
 	 * actions are received within 400 ms, the playback activity is opened
 	 * instead.
@@ -136,7 +136,7 @@ public final class PlaybackService extends Service
 	/**
 	 * Action for startService: advance to the next song.
 	 *
-	 * Unlike {@link PlaybackService#ACTION_NEXT_SONG}, the toggle does
+	 * Unlike {@link ch.blinkenlights.android.vanilla.PlaybackService#ACTION_NEXT_SONG}, the toggle does
 	 * not occur immediately. Instead, it is delayed so that if two of these
 	 * actions are received within 400 ms, the playback activity is opened
 	 * instead.
@@ -238,12 +238,12 @@ public final class PlaybackService extends Service
 	 *
 	 * The format of this is 0b00000000_00000000_00000000f_feeedcba,
 	 * where each bit is:
-	 *     a:   {@link PlaybackService#FLAG_PLAYING}
-	 *     b:   {@link PlaybackService#FLAG_NO_MEDIA}
-	 *     c:   {@link PlaybackService#FLAG_ERROR}
-	 *     d:   {@link PlaybackService#FLAG_EMPTY_QUEUE}
-	 *     eee: {@link PlaybackService#MASK_FINISH}
-	 *     ff:  {@link PlaybackService#MASK_SHUFFLE}
+	 *     a:   {@link ch.blinkenlights.android.vanilla.PlaybackService#FLAG_PLAYING}
+	 *     b:   {@link ch.blinkenlights.android.vanilla.PlaybackService#FLAG_NO_MEDIA}
+	 *     c:   {@link ch.blinkenlights.android.vanilla.PlaybackService#FLAG_ERROR}
+	 *     d:   {@link ch.blinkenlights.android.vanilla.PlaybackService#FLAG_EMPTY_QUEUE}
+	 *     eee: {@link ch.blinkenlights.android.vanilla.PlaybackService#MASK_FINISH}
+	 *     ff:  {@link ch.blinkenlights.android.vanilla.PlaybackService#MASK_SHUFFLE}
 	 */
 	int mState;
 	
@@ -288,7 +288,7 @@ public final class PlaybackService extends Service
 	private int mIdleTimeout;
 	/**
 	 * The intent for the notification to execute, created by
-	 * {@link PlaybackService#createNotificationAction(SharedPreferences)}.
+	 * {@link ch.blinkenlights.android.vanilla.PlaybackService#createNotificationAction(android.content.SharedPreferences)}.
 	 */
 	private PendingIntent mNotificationAction;
 	/**
@@ -1272,7 +1272,7 @@ public final class PlaybackService extends Service
 	 * Returns the song <code>delta</code> places away from the current
 	 * position.
 	 *
-	 * @see SongTimeline#getSong(int)
+	 * @see ch.blinkenlights.android.vanilla.SongTimeline#getSong(int)
 	 */
 	public Song getSong(int delta)
 	{
@@ -1320,7 +1320,7 @@ public final class PlaybackService extends Service
 	}
 
 	/**
-	 * Calls {@link PowerManager.WakeLock#release()} on mWakeLock.
+	 * Calls {@link android.os.PowerManager.WakeLock#release()} on mWakeLock.
 	 */
 	private static final int RELEASE_WAKE_LOCK = 1;
 	/**
@@ -1343,8 +1343,8 @@ public final class PlaybackService extends Service
 	 */
 	private static final int FADE_OUT = 7;
 	/**
-	 * If arg1 is 0, calls {@link PlaybackService#playPause()}.
-	 * Otherwise, calls {@link PlaybackService#setCurrentSong(int)} with arg1.
+	 * If arg1 is 0, calls {@link ch.blinkenlights.android.vanilla.PlaybackService#playPause()}.
+	 * Otherwise, calls {@link ch.blinkenlights.android.vanilla.PlaybackService#setCurrentSong(int)} with arg1.
 	 */
 	private static final int CALL_GO = 8;
 	private static final int BROADCAST_CHANGE = 10;

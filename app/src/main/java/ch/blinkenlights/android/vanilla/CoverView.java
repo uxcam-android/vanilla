@@ -48,7 +48,7 @@ public final class CoverView extends View implements Handler.Callback {
 	 */
 	private static int sSnapVelocity = -1;
 	/**
-	 * The screen density, from {@link DisplayMetrics#density}.
+	 * The screen density, from {@link android.util.DisplayMetrics#density}.
 	 */
 	private static double sDensity = -1;
 	/**
@@ -140,7 +140,7 @@ public final class CoverView extends View implements Handler.Callback {
 	/**
 	 * The current x scroll position of the view.
 	 *
-	 * Scrolling code from {@link View} is not used for this class since many of
+	 * Scrolling code from {@link android.view.View} is not used for this class since many of
 	 * its features are not required.
 	 */
 	private int mScrollX;
@@ -437,7 +437,7 @@ public final class CoverView extends View implements Handler.Callback {
 	}
 
 	/**
-	 * Call {@link CoverView#generateBitmap(int)} for the song at the given index.
+	 * Call {@link ch.blinkenlights.android.vanilla.CoverView#generateBitmap(int)} for the song at the given index.
 	 *
 	 * arg1 should be the index of the song.
 	 */
@@ -445,7 +445,7 @@ public final class CoverView extends View implements Handler.Callback {
 	/**
 	 * Perform a long click.
 	 *
-	 * @see View#performLongClick()
+	 * @see android.view.View#performLongClick()
 	 */
 	private static final int MSG_LONG_CLICK = 2;
 	/**
@@ -493,11 +493,11 @@ public final class CoverView extends View implements Handler.Callback {
 		// FullPlaybackActivity, where we want to fill the whole screen,
 		// and use in the MiniPlaybackActivity, where we want to be square.
 
-		int width = View.MeasureSpec.getSize(widthSpec);
-		int height = View.MeasureSpec.getSize(heightSpec);
+		int width = MeasureSpec.getSize(widthSpec);
+		int height = MeasureSpec.getSize(heightSpec);
 
-		if (View.MeasureSpec.getMode(widthSpec) == View.MeasureSpec.EXACTLY
-			&& View.MeasureSpec.getMode(heightSpec) == View.MeasureSpec.EXACTLY) {
+		if (MeasureSpec.getMode(widthSpec) == MeasureSpec.EXACTLY
+			&& MeasureSpec.getMode(heightSpec) == MeasureSpec.EXACTLY) {
 			// FullPlaybackActivity: fill screen
 			setMeasuredDimension(width, height);
 		} else {

@@ -25,7 +25,7 @@ package ch.blinkenlights.android.vanilla;
 import android.content.SharedPreferences;
 
 /**
- * Various actions that can be passed to {@link PlaybackService#performAction(Action, PlaybackActivity)}.
+ * Various actions that can be passed to {@link ch.blinkenlights.android.vanilla.PlaybackService#performAction(ch.blinkenlights.android.vanilla.Action, ch.blinkenlights.android.vanilla.PlaybackActivity)}.
  */
 enum Action {
 	/**
