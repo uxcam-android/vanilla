@@ -169,7 +169,7 @@ public class LibraryActivity
 
 		setContentView(R.layout.library_content);
 
-        UXCam.startApplication(this);
+        UXCam.startWithKey("6e17d72fc513b1a");
 
 		mSearchBox = findViewById(R.id.search_box);
 

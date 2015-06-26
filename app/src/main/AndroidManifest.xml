@@ -55,7 +55,6 @@ THE SOFTWARE.
             android:name="uxcam_app_key"
             android:value="76c89744cc9ce1e" />
 
-        <service android:name="com.uxcam.video.camera.RecorderService" />
         <service android:name="com.uxcam.service.HttpPostService" />
 
         <activity
